@@ -41,6 +41,11 @@ ModelImporter:
       internalID: 8521775250740709660
       firstFrame: 0
       lastFrame: 100
+      name: AnimalArmature|AnimalArmature|AnimalArmature|Idle (1)
+      takeName: AnimalArmature|AnimalArmature|AnimalArmature|Idle
+      internalID: 8521775250740709660
+      firstFrame: 0
+      lastFrame: 200
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -48,6 +53,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -106,6 +112,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -135,6 +142,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
