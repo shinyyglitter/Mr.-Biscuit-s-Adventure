@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -701,7 +705,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!65 &1252739020
 BoxCollider:
@@ -722,8 +726,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3077211, y: 1.9578071, z: 2.2510724}
-  m_Center: {x: -0.00415802, y: 0.97654736, z: 0.11406921}
+  m_Size: {x: 1.3077211, y: 1.4189024, z: 2.2510724}
+  m_Center: {x: -0.00415802, y: 0.707095, z: 0.11406921}
 --- !u!114 &1252739021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,6 +740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3082814957c7f4589f8a0acdba7872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  animator: {fileID: 0}
 --- !u!95 &1252739022
 Animator:
   serializedVersion: 7
@@ -809,6 +814,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
       propertyPath: m_Name
       value: Road (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -909,6 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3082814957c7f4589f8a0acdba7872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  animator: {fileID: 0}
 --- !u!95 &1993639411
 Animator:
   serializedVersion: 7
