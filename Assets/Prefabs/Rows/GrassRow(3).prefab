@@ -235,6 +235,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8631693243440554172}
+  - component: {fileID: 7241111608905651539}
+  - component: {fileID: 5675104240438142325}
   m_Layer: 0
   m_Name: GrassRow(3)
   m_TagString: Untagged
@@ -251,7 +253,7 @@ Transform:
   m_GameObject: {fileID: 1362043980531022470}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -263,6 +265,31 @@ Transform:
   - {fileID: 6846225114681749893}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7241111608905651539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362043980531022470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff7731c7600c66441aba630361b2fe0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RowController
+  speed: 2
+--- !u!114 &5675104240438142325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362043980531022470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f8a8d9a07bad54e8fa5a86588f37a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOutOfBounds
 --- !u!1 &1501701316054809348
 GameObject:
   m_ObjectHideFlags: 0
