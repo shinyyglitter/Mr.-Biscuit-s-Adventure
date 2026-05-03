@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 578665939}
   - component: {fileID: 578665938}
   m_Layer: 0
-  m_Name: SpawnManager
+  m_Name: RowSpawnManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,12 +173,62 @@ Transform:
   m_GameObject: {fileID: 578665937}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.79074, y: 0.18628, z: -3.85658}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1183840688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1183840689}
+  - component: {fileID: 1183840690}
+  m_Layer: 0
+  m_Name: CarSpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1183840689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183840688}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1183840690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183840688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4724934c60be9804eaf24c4dd388849a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarSpawnManager
+  carPrefabs:
+  - {fileID: 8077317103862377166, guid: 7772e134810e2014cb981fd25ad5cdce, type: 3}
+  - {fileID: 2414289756018496267, guid: 76ac62a234d5079438c642b850eca81f, type: 3}
+  - {fileID: 3235093818165057478, guid: 60b6dd760a4fbca4681d56a8a8bccdd1, type: 3}
+  - {fileID: 208844234337686032, guid: 030041ec7d51e9644ac8776e1dcdd21a, type: 3}
+  - {fileID: 3846078683497022255, guid: 8579d079f92019b4b84999a8ab171e0d, type: 3}
 --- !u!1 &1854240366
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,3 +500,4 @@ SceneRoots:
   - {fileID: 1854240369}
   - {fileID: 1947183843}
   - {fileID: 578665939}
+  - {fileID: 1183840689}

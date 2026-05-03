@@ -9,14 +9,12 @@ public class RowSpawnManager : MonoBehaviour
     private float spawnInterval = 1f; 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created 
-
     void Start() 
     { 
         InvokeRepeating("SpawnRandomRow", startDelay, spawnInterval); 
     } 
     
     // Update is called once per frame 
-
     void Update() 
     { 
         if (Input.GetKeyDown(KeyCode.S)) { SpawnRandomRow(); } 
