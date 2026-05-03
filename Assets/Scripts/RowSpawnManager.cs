@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+public class RowSpawnManager : MonoBehaviour
 { 
     public GameObject[] rowPrefabs; 
     private float spawnRangeX = 0f; 
-    private float spawnPosZ = 15f; 
+    private float spawnPosZ = 30f; 
     private float startDelay = 0f; 
     private float spawnInterval = 1f; 
     
