@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 6715035534114087854}
   - component: {fileID: 1938504380660353708}
   - component: {fileID: 8461163610845510121}
+  - component: {fileID: 2578923177450921092}
   m_Layer: 0
   m_Name: Car1Wheel-FL
   m_TagString: Untagged
@@ -148,6 +149,18 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2578923177450921092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410536460970620656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec17f9338d9b6ec46958b07f435ee4b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarWheelsRotate
 --- !u!1 &4555485039775260960
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +172,7 @@ GameObject:
   - component: {fileID: 7073808575434141174}
   - component: {fileID: 5671424264506096262}
   - component: {fileID: 5458744895523614108}
+  - component: {fileID: 8687639300746354111}
   m_Layer: 0
   m_Name: Car1Wheel-FR
   m_TagString: Untagged
@@ -238,6 +252,18 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8687639300746354111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4555485039775260960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec17f9338d9b6ec46958b07f435ee4b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarWheelsRotate
 --- !u!1 &8711689642891352194
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +275,7 @@ GameObject:
   - component: {fileID: 2026969003607389700}
   - component: {fileID: 1084707746210744217}
   - component: {fileID: 3448043165719078356}
+  - component: {fileID: 5470364923944851951}
   m_Layer: 0
   m_Name: Car1Wheel-RL
   m_TagString: Untagged
@@ -328,6 +355,18 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5470364923944851951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8711689642891352194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec17f9338d9b6ec46958b07f435ee4b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarWheelsRotate
 --- !u!1 &8950398268408155805
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,6 +378,7 @@ GameObject:
   - component: {fileID: 3045499011179254062}
   - component: {fileID: 5206550520518939695}
   - component: {fileID: 6635616979985773873}
+  - component: {fileID: 4512518363910669698}
   m_Layer: 0
   m_Name: Car1Wheel-RR
   m_TagString: Untagged
@@ -418,6 +458,18 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4512518363910669698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8950398268408155805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec17f9338d9b6ec46958b07f435ee4b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarWheelsRotate
 --- !u!1 &9127668209376916544
 GameObject:
   m_ObjectHideFlags: 0
