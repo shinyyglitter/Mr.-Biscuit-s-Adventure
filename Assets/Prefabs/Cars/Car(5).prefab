@@ -306,6 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2126891219618495939}
   - component: {fileID: 1204101813089631930}
+  - component: {fileID: 6127034332571753836}
   m_Layer: 0
   m_Name: Car(5)
   m_TagString: Enemy
@@ -354,6 +355,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.342872, y: 1.9071069, z: 4.4461126}
   m_Center: {x: 0.004451796, y: 0.94712484, z: -0.35350394}
+--- !u!114 &6127034332571753836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3846078683497022255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b4f69aa387d4c47a08e7f34e228672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarController
 --- !u!1 &5744375458365524837
 GameObject:
   m_ObjectHideFlags: 0
