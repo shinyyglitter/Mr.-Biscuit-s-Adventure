@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2873235031435120306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4844393853811808894}
+  m_Layer: 0
+  m_Name: RowRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4844393853811808894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2873235031435120306}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5343747089039077357}
+  - {fileID: 3395935345358077803}
+  m_Father: {fileID: 6358363659376759705}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3833972854475735673
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,8 +64,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5343747089039077357}
-  - {fileID: 3395935345358077803}
+  - {fileID: 4844393853811808894}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7502607064116630807
@@ -47,7 +79,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7731c7600c66441aba630361b2fe0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RowController
-  speed: 2
 --- !u!114 &7735237113198760292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,19 +97,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6358363659376759705}
+    m_TransformParent: {fileID: 4844393853811808894}
     m_Modifications:
     - target: {fileID: 2126891219618495939, guid: 8579d079f92019b4b84999a8ab171e0d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8000001
+      value: 0.80000013
       objectReference: {fileID: 0}
     - target: {fileID: 2126891219618495939, guid: 8579d079f92019b4b84999a8ab171e0d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.8000001
+      value: 0.80000013
       objectReference: {fileID: 0}
     - target: {fileID: 2126891219618495939, guid: 8579d079f92019b4b84999a8ab171e0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.59591
+      value: -6.879998
       objectReference: {fileID: 0}
     - target: {fileID: 2126891219618495939, guid: 8579d079f92019b4b84999a8ab171e0d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -86,7 +117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2126891219618495939, guid: 8579d079f92019b4b84999a8ab171e0d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.2019997
+      value: 0.0008106977
       objectReference: {fileID: 0}
     - target: {fileID: 2126891219618495939, guid: 8579d079f92019b4b84999a8ab171e0d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -136,11 +167,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6358363659376759705}
+    m_TransformParent: {fileID: 4844393853811808894}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.71591
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -148,7 +179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.19281
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
       propertyPath: m_LocalRotation.w

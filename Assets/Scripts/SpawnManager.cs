@@ -3,9 +3,9 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 { 
     public GameObject[] rowPrefabs; 
-    private float spawnRangeX = 0; 
-    private float spawnPosZ = 10; 
-    private float startDelay = 0; 
+    private float spawnRangeX = 0f; 
+    private float spawnPosZ = 15f; 
+    private float startDelay = 0f; 
     private float spawnInterval = 1f; 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created 
