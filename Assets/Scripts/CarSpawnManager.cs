@@ -6,7 +6,7 @@ public class CarSpawnManager : MonoBehaviour
     private float spawnRangeX = 0f; 
     private float spawnPosZ = 10f; 
     private float startDelay = 0f; 
-    private float spawnInterval = 1f; 
+    private float spawnInterval = 1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
