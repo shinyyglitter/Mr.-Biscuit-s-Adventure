@@ -225,9 +225,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CarSpawnManager
   carPrefabs:
   - {fileID: 8077317103862377166, guid: 7772e134810e2014cb981fd25ad5cdce, type: 3}
-  - {fileID: 2414289756018496267, guid: 76ac62a234d5079438c642b850eca81f, type: 3}
-  - {fileID: 3235093818165057478, guid: 60b6dd760a4fbca4681d56a8a8bccdd1, type: 3}
-  - {fileID: 208844234337686032, guid: 030041ec7d51e9644ac8776e1dcdd21a, type: 3}
+  - {fileID: 1369552063435901807, guid: 633a7573a9b24554092895261e7aa184, type: 3}
+  - {fileID: 4026043741687852422, guid: 47f8888107326d842b826dbbc10a452c, type: 3}
+  - {fileID: 6533448991227306053, guid: b330bd35cf8697b43a3061ac401fafd7, type: 3}
   - {fileID: 3846078683497022255, guid: 8579d079f92019b4b84999a8ab171e0d, type: 3}
 --- !u!1 &1854240366
 GameObject:
@@ -316,7 +316,7 @@ Transform:
   m_GameObject: {fileID: 1854240366}
   serializedVersion: 2
   m_LocalRotation: {x: 0.42260495, y: -0.034540668, z: 0.008859576, w: 0.90561223}
-  m_LocalPosition: {x: 1.7, y: 7.8, z: 2.54}
+  m_LocalPosition: {x: 0.42, y: 6.09, z: 2.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
