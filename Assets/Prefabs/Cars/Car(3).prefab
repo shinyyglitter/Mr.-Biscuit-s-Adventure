@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7304372942027014475}
   - component: {fileID: 6406087134983219657}
   - component: {fileID: 7482126182721469239}
+  - component: {fileID: 2892517696023099621}
   m_Layer: 0
   m_Name: Car(3)
   m_TagString: Enemy
@@ -71,6 +72,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b4f69aa387d4c47a08e7f34e228672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarController
+--- !u!114 &2892517696023099621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4026043741687852422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f8a8d9a07bad54e8fa5a86588f37a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOutOfBounds
 --- !u!1 &5245445619283244917
 GameObject:
   m_ObjectHideFlags: 0
