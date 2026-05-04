@@ -4,7 +4,8 @@ public class PlayerController : MonoBehaviour
 {
     private float speed = 5.0f;
     private float turnSpeed = 45.0f;
-    private float jumpForce = 5.0f;
+    private float jumpForce;
+    private float ySpeed;
     private bool isGrounded = true; // Grounded check for jumping
     private float horizontalInput;
     private float verticalInput;
@@ -24,6 +25,8 @@ public class PlayerController : MonoBehaviour
 {
     horizontalInput = Input.GetAxis("Horizontal");
     verticalInput = Input.GetAxis("Vertical");
+    transform.Translate(Vector3.forward * verticalInput * speed * Time.deltaTime);
+    transform.Rotate(Vector3.up, horizontalInput * turnSpeed * Time.deltaTime);
 
     isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.1f);
 
@@ -31,21 +34,12 @@ public class PlayerController : MonoBehaviour
     animator.SetBool("Walking", isWalking);
     animator.SetBool("Idle", !isWalking);
 
-    if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-    {
-        Rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        animator.SetTrigger("Jumping");
-    }
+    ySpeed += Physics.gravity.y * Time.deltaTime;
+
+    
 }
 
-void FixedUpdate()
-{
-    Vector3 movement = transform.forward * verticalInput * speed;
-    Rb.linearVelocity = new Vector3(movement.x, Rb.linearVelocity.y, movement.z);
 
-    Quaternion turn = Quaternion.Euler(Vector3.up * turnSpeed * horizontalInput * Time.fixedDeltaTime);
-    Rb.MoveRotation(Rb.rotation * turn);
-}
 
 void OnCollisionEnter(Collision collision)
 {
