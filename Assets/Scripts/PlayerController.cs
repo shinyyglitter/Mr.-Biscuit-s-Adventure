@@ -4,20 +4,19 @@ public class PlayerController : MonoBehaviour
 {
     private float speed = 5.0f;
     private float turnSpeed = 45.0f;
-    private float jumpForce;
-    private float ySpeed;
-    private bool isGrounded = true; // Grounded check for jumping
+    //Endre denne for hopphøyden
+    private float jumpForce = 50.0f;
+    private bool isGrounded;
     private float horizontalInput;
     private float verticalInput;
     public Animator animator;
-    private Rigidbody Rb;
+    private Rigidbody playerRb;
 
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
        animator = GetComponent<Animator>();
-       Rb = GetComponent<Rigidbody>();
+       playerRb = GetComponent<Rigidbody>();
+       
     }
 
     // Update is called once per frame
@@ -25,27 +24,31 @@ public class PlayerController : MonoBehaviour
 {
     horizontalInput = Input.GetAxis("Horizontal");
     verticalInput = Input.GetAxis("Vertical");
-    transform.Translate(Vector3.forward * verticalInput * speed * Time.deltaTime);
+
     transform.Rotate(Vector3.up, horizontalInput * turnSpeed * Time.deltaTime);
 
-    isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.1f);
+   
+    if (Input.GetKeyDown(KeyCode.Space)&& isGrounded)
+    {
+        playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        isGrounded = false;
+    }
 
     bool isWalking = horizontalInput != 0 || verticalInput != 0;
     animator.SetBool("Walking", isWalking);
     animator.SetBool("Idle", !isWalking);
-
-    ySpeed += Physics.gravity.y * Time.deltaTime;
-
-    
 }
-
-
-
-void OnCollisionEnter(Collision collision)
-{
-    if (collision.gameObject.CompareTag("Ground"))
+private void OnCollisionEnter(Collision collision)
     {
-        isGrounded = true;
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
     }
-}
+    void FixedUpdate()
+    {
+    Vector3 move = transform.forward * verticalInput * speed;
+    playerRb.linearVelocity = new Vector3(move.x, playerRb.linearVelocity.y, move.z);
+    }
+
 }

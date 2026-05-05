@@ -540,6 +540,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -572,8 +576,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0000002, y: 1, z: 1}
+  m_Center: {x: -0.00000007152558, y: 0, z: 0}
 --- !u!1001 &1252739016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -600,7 +604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 319d5c2df23ed554d855bbb3363c1070, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.026
+      value: 0.068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 319d5c2df23ed554d855bbb3363c1070, type: 3}
       propertyPath: m_LocalPosition.z
@@ -705,7 +709,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 16
   m_CollisionDetection: 0
 --- !u!65 &1252739020
 BoxCollider:
@@ -726,8 +730,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3077211, y: 1.4189024, z: 2.2510724}
-  m_Center: {x: -0.00415802, y: 0.707095, z: 0.11406921}
+  m_Size: {x: 1.3077211, y: 1.412065, z: 2.254397}
+  m_Center: {x: -0.00415802, y: 0.7105142, z: 0.11573151}
 --- !u!114 &1252739021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -866,7 +870,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1993639405}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
