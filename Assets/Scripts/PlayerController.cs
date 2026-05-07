@@ -51,4 +51,12 @@ private void OnCollisionEnter(Collision collision)
     playerRb.linearVelocity = new Vector3(move.x, playerRb.linearVelocity.y, move.z);
     }
 
+    private void OnEnterTrigger(Collider other)
+    {
+        if (other.CompareTag("Point"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
 }
