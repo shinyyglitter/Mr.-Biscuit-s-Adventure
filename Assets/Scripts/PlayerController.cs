@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     {
        animator = GetComponent<Animator>();
        playerRb = GetComponent<Rigidbody>();
+       pm.pointCount = 0;
        
     }
 

@@ -7,12 +7,19 @@ public class RowSpawnManager : MonoBehaviour
     private float spawnPosZ = 30f; 
     private float startDelay = 0f; 
     private float spawnInterval = 1f; 
+    public GameManager gameManager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created 
     void Start() 
     { 
-        InvokeRepeating("SpawnRandomRow", startDelay, spawnInterval); 
+        
+        
     } 
+
+    public void StartSpawning()
+    {
+        InvokeRepeating("SpawnRandomRow", startDelay, spawnInterval); 
+    }
     
     // Update is called once per frame 
     void Update() 
@@ -22,8 +29,10 @@ public class RowSpawnManager : MonoBehaviour
          
     void SpawnRandomRow() 
     { 
-        int rowIndex = Random.Range(0, rowPrefabs.Length); 
-        Vector3 spawnpos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ); 
-        Instantiate(rowPrefabs[rowIndex], spawnpos, rowPrefabs[rowIndex].transform.rotation); 
+        
+            int rowIndex = Random.Range(0, rowPrefabs.Length); 
+            Vector3 spawnpos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ); 
+            Instantiate(rowPrefabs[rowIndex], spawnpos, rowPrefabs[rowIndex].transform.rotation); 
+        
     } 
 }

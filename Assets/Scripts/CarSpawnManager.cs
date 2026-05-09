@@ -7,12 +7,18 @@ public class CarSpawnManager : MonoBehaviour
     private float spawnPosZ = 10f; 
     private float startDelay = 0f; 
     private float spawnInterval = 1f;
+    public GameManager gameManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     { 
-        InvokeRepeating("SpawnRandomCar", startDelay, spawnInterval); 
+        
     } 
+
+    public void StartSpawning()
+    {
+        InvokeRepeating("SpawnRandomCar", startDelay, spawnInterval); 
+    }
 
     // Update is called once per frame
     void Update() 
