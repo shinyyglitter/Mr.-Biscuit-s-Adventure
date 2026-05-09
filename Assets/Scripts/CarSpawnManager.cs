@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class CarSpawnManager : MonoBehaviour
 {
-    public GameObject[] carPrefabs;
-    public Transform carSpawnPoint;
+    public GameObject[] carPrefabs; 
+    
     private float minInterval = 2f;
     private float maxInterval = 5f;
+    public Transform carSpawnPoint;
 
      public GameManager gameManager;
 
