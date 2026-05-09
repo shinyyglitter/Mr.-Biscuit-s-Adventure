@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private float verticalInput;
     public Animator animator;
     private Rigidbody playerRb;
+    public PointManager pm;
 
     void Start()
     {
@@ -51,11 +52,16 @@ private void OnCollisionEnter(Collision collision)
     playerRb.linearVelocity = new Vector3(move.x, playerRb.linearVelocity.y, move.z);
     }
 
-    private void OnEnterTrigger(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Point"))
+        if (other.gameObject.CompareTag("Point"))
         {
+            pm.pointCount++;
+
+            Debug.Log("Points: " + pm.pointCount);
+            Debug.Log("Player collided with a point!");
             Destroy(other.gameObject);
+            
         }
     }
 
