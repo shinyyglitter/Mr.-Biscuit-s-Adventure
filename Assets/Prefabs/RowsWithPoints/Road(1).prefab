@@ -121,6 +121,7 @@ Transform:
   m_Children:
   - {fileID: 3421854510547015458}
   - {fileID: 5366497995451854277}
+  - {fileID: 4576162525909653873}
   m_Father: {fileID: 2139766461728216327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5182471525653579167
@@ -258,6 +259,57 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.000001, y: 2.2204466e-16, z: 10.000002}
   m_Center: {x: 0, y: -0.000000029802322, z: -0.000000029802322}
+--- !u!1 &7898051824426104130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4576162525909653873}
+  - component: {fileID: 7019506602116446780}
+  m_Layer: 0
+  m_Name: CarSpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4576162525909653873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7898051824426104130}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6424733657093903600}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7019506602116446780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7898051824426104130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4724934c60be9804eaf24c4dd388849a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarSpawnManager
+  carPrefabs:
+  - {fileID: 8077317103862377166, guid: 7772e134810e2014cb981fd25ad5cdce, type: 3}
+  - {fileID: 1369552063435901807, guid: 633a7573a9b24554092895261e7aa184, type: 3}
+  - {fileID: 4026043741687852422, guid: 47f8888107326d842b826dbbc10a452c, type: 3}
+  - {fileID: 6533448991227306053, guid: b330bd35cf8697b43a3061ac401fafd7, type: 3}
+  - {fileID: 3846078683497022255, guid: 8579d079f92019b4b84999a8ab171e0d, type: 3}
+  carSpawnPoint: {fileID: 5366497995451854277}
 --- !u!1001 &2951660891923574985
 PrefabInstance:
   m_ObjectHideFlags: 0
