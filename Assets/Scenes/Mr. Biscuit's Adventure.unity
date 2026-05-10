@@ -131,6 +131,18 @@ PrefabInstance:
       propertyPath: pm
       value: 
       objectReference: {fileID: 408130377}
+    - target: {fileID: 4893790473002199033, guid: 60ae384312e6ec1409ed98ce1abe10be, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 408130379}
+    - target: {fileID: 5086638683648576633, guid: 60ae384312e6ec1409ed98ce1abe10be, type: 3}
+      propertyPath: pm
+      value: 
+      objectReference: {fileID: 408130377}
+    - target: {fileID: 5086638683648576633, guid: 60ae384312e6ec1409ed98ce1abe10be, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 408130379}
     - target: {fileID: 5993987136688156939, guid: 60ae384312e6ec1409ed98ce1abe10be, type: 3}
       propertyPath: m_Name
       value: Cat
