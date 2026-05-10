@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private Rigidbody playerRb;
     public PointManager pm;
+    public GameManager gameManager;
 
     void Start()
     {
@@ -19,18 +20,34 @@ public class PlayerController : MonoBehaviour
        playerRb = GetComponent<Rigidbody>();
 
        playerRb.freezeRotation = true;
+       gameManager = FindAnyObjectByType<GameManager>();
        pm.pointCount = 0;
        
     }
 
     // Update is called once per frame
    void Update()
-{
-    horizontalInput = Input.GetAxis("Horizontal");
-    verticalInput = Input.GetAxis("Vertical");
+    {
+        if (!gameManager.isGameActive) return;
+        
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
 
-    transform.Rotate(Vector3.up, horizontalInput * turnSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up, horizontalInput * turnSpeed * Time.deltaTime);
 
+    
+        if (Input.GetKeyDown(KeyCode.Space)&& isGrounded)
+        {
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
+        }
+
+        bool isWalking = horizontalInput != 0 || verticalInput != 0;
+        animator.SetBool("Walking", isWalking);
+        animator.SetBool("Idle", !isWalking);
+    }
+
+    private void OnCollisionEnter(Collision collision)
     bool isWalking = horizontalInput != 0 || verticalInput != 0;
     animator.SetBool("Walking", isWalking);
     animator.SetBool("Idle", !isWalking);
@@ -55,6 +72,14 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
+    }
+    
+    void FixedUpdate()
+    {
+        if (!gameManager.isGameActive) return;
+
+        Vector3 move = transform.forward * verticalInput * speed;
+        playerRb.linearVelocity = new Vector3(move.x, playerRb.linearVelocity.y, move.z);
     }
 
     private void OnTriggerEnter(Collider other)
