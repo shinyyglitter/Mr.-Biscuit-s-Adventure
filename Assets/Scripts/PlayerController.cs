@@ -52,10 +52,11 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
     }
+    
     void FixedUpdate()
     {
         if (!gameManager.isGameActive) return;
-        
+
         Vector3 move = transform.forward * verticalInput * speed;
         playerRb.linearVelocity = new Vector3(move.x, playerRb.linearVelocity.y, move.z);
     }
