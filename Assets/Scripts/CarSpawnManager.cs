@@ -34,7 +34,7 @@ public class CarSpawnManager : MonoBehaviour
 
         gameManager = FindAnyObjectByType<GameManager>();
         
-        if (!gameManager.isGameActive){
+        if (gameManager.isGameActive){
         float nextInterval = Random.Range(minInterval, maxInterval);
         Invoke(nameof(SpawnRandomCar), nextInterval);
         } 

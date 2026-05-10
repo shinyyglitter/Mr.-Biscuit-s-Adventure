@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     public bool isGameActive;
     
     public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI pointText;
+    public TextMeshProUGUI finalScoreText;
+    public Image logoImage;
     public Button restartButton;
     public Button startButton;
     public PointManager pointManager;
@@ -27,8 +30,10 @@ public class GameManager : MonoBehaviour
     {
         isGameActive = true;
         pointManager.pointCount = 0;
-
+        pointText.gameObject.SetActive(true);
         startButton.gameObject.SetActive(false);
+        logoImage.gameObject.SetActive(false);
+        
         
         RowController.move = true;
         rowSpawnManager.StartSpawning();
@@ -40,6 +45,9 @@ public class GameManager : MonoBehaviour
         RowController.move = false;
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
+        pointText.gameObject.SetActive(false);
+        finalScoreText.gameObject.SetActive(true);
+        finalScoreText.text = "Final Score: " + pointManager.pointCount;
         playerController.StopAnimation();
             
     }

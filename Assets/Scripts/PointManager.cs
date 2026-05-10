@@ -14,6 +14,6 @@ public class PointManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pointText.text = "Points: " + pointCount.ToString();
+        pointText.text = "" + pointCount.ToString();
     }
 }
