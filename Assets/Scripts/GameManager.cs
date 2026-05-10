@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 
         startButton.gameObject.SetActive(false);
         
+        RowController.move = true;
         rowSpawnManager.StartSpawning();
     }
 

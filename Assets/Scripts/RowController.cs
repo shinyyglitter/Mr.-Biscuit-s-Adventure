@@ -4,6 +4,7 @@ public class RowController : MonoBehaviour
 {
 
     private float speed = 2f;
+    public static bool move = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,6 +15,7 @@ public class RowController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * -1 * Time.deltaTime * speed);
+        if (!move) return;
+        transform.Translate(Vector3.back * Time.deltaTime * speed);
     }
 }
