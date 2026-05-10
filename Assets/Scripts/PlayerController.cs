@@ -74,31 +74,4 @@ public class PlayerController : MonoBehaviour
             
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
-    }
-    
-    void FixedUpdate()
-    {
-        if (!gameManager.isGameActive) return;
-
-        Vector3 move = transform.forward * verticalInput * speed;
-        playerRb.linearVelocity = new Vector3(move.x, playerRb.linearVelocity.y, move.z);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Point"))
-        {
-            pm.pointCount++;
-            Destroy(other.gameObject);
-            
-        }
-    }
-
 }
