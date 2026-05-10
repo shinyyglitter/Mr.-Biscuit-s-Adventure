@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     {
        animator = GetComponent<Animator>();
        playerRb = GetComponent<Rigidbody>();
+
+       playerRb.freezeRotation = true;
        pm.pointCount = 0;
        
     }
@@ -29,28 +31,30 @@ public class PlayerController : MonoBehaviour
 
     transform.Rotate(Vector3.up, horizontalInput * turnSpeed * Time.deltaTime);
 
-   
+    bool isWalking = horizontalInput != 0 || verticalInput != 0;
+    animator.SetBool("Walking", isWalking);
+    animator.SetBool("Idle", !isWalking);
+    
     if (Input.GetKeyDown(KeyCode.Space)&& isGrounded)
     {
         playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         isGrounded = false;
     }
-
-    bool isWalking = horizontalInput != 0 || verticalInput != 0;
-    animator.SetBool("Walking", isWalking);
-    animator.SetBool("Idle", !isWalking);
 }
-private void OnCollisionEnter(Collision collision)
+
+    void FixedUpdate()
+    {
+    Vector3 move = transform.forward * verticalInput * speed;
+    Vector3 targetVelocity = transform.forward * verticalInput * speed;
+
+    playerRb.linearVelocity = new Vector3(targetVelocity.x + playerRb.linearVelocity.x * 0f, playerRb.linearVelocity.y, targetVelocity.z + playerRb.linearVelocity.z * 0f);
+    }
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
         }
-    }
-    void FixedUpdate()
-    {
-    Vector3 move = transform.forward * verticalInput * speed;
-    playerRb.linearVelocity = new Vector3(move.x, playerRb.linearVelocity.y, move.z);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -58,9 +62,6 @@ private void OnCollisionEnter(Collision collision)
         if (other.gameObject.CompareTag("Point"))
         {
             pm.pointCount++;
-
-            Debug.Log("Points: " + pm.pointCount);
-            Debug.Log("Player collided with a point!");
             Destroy(other.gameObject);
             
         }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7042204200324757264}
   m_Layer: 0
   m_Name: Sidewalk(2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -480,6 +480,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d31780e390ad1c24aa1cb0bd63514a3b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 650569291012262176}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d31780e390ad1c24aa1cb0bd63514a3b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 946544724478292713}
   m_SourcePrefab: {fileID: 100100000, guid: d31780e390ad1c24aa1cb0bd63514a3b, type: 3}
 --- !u!4 &2754578268253209613 stripped
 Transform:
@@ -512,6 +515,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -0.00000047683716, y: 0, z: 0}
+--- !u!114 &946544724478292713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3274656770710970039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08453ef46a269fe47bc2c3f8fa5042be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ParentPlayer
 --- !u!1001 &5935903732673867336
 PrefabInstance:
   m_ObjectHideFlags: 0

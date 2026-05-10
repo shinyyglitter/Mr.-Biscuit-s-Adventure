@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 347238753521584079}
   - component: {fileID: 5200833596494625066}
   - component: {fileID: 5463815586380040650}
+  - component: {fileID: 1769460891187822698}
   m_Layer: 0
   m_Name: Grass
   m_TagString: Untagged
@@ -396,6 +397,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -0.00000047683716, y: 0, z: 0}
+--- !u!114 &1769460891187822698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4451875643308645686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08453ef46a269fe47bc2c3f8fa5042be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ParentPlayer
 --- !u!1 &5169214177035965167
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +535,7 @@ GameObject:
   - component: {fileID: 2152405305534289263}
   m_Layer: 0
   m_Name: GrassRow(5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

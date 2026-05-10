@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 7361365962202110936}
   m_Layer: 0
   m_Name: Road(5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,6 +373,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2546286110033542062}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6740701161825194466}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3921400177783324639}
   m_SourcePrefab: {fileID: 100100000, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
 --- !u!1 &1514697709152320449 stripped
 GameObject:
@@ -400,6 +406,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6740701161825194466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514697709152320449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08453ef46a269fe47bc2c3f8fa5042be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ParentPlayer
+--- !u!114 &3921400177783324639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514697709152320449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08453ef46a269fe47bc2c3f8fa5042be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ParentPlayer
 --- !u!4 &2183851257988342139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
