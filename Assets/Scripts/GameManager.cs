@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public Button startButton;
     public PointManager pointManager;
     public RowSpawnManager rowSpawnManager;
-    public CarSpawnManager carSpawnManager; 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,7 +28,6 @@ public class GameManager : MonoBehaviour
         startButton.gameObject.SetActive(false);
         
         rowSpawnManager.StartSpawning();
-        carSpawnManager.StartSpawning();
     }
 
     public void GameOver()

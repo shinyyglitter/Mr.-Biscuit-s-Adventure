@@ -8,12 +8,10 @@ public class CarSpawnManager : MonoBehaviour
     private float maxInterval = 5f;
     public Transform carSpawnPoint;
 
-     public GameManager gameManager;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     { 
-        
+        SpawnRandomCar();
     } 
 
     public void StartSpawning()
