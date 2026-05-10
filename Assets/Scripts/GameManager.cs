@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public Button startButton;
     public PointManager pointManager;
     public RowSpawnManager rowSpawnManager;
+    public Animator animator;
+    public PlayerController playerController;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +21,7 @@ public class GameManager : MonoBehaviour
         isGameActive = false;
         gameOverText.gameObject.SetActive(false);
         restartButton.gameObject.SetActive(false);
+        playerController = FindAnyObjectByType<PlayerController>();
     }
     public void StartGame()
     {
@@ -37,6 +40,7 @@ public class GameManager : MonoBehaviour
         RowController.move = false;
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
+        playerController.StopAnimation();
             
     }
     public void RestartGame()

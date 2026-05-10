@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 5.0f;
+    private float speed = 7.0f;
     private float turnSpeed = 100.0f;
     //Endre denne for hopphøyden
     private float jumpForce = 80.0f;
@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
     public PointManager pm;
     public GameManager gameManager;
+    public  float behindDistance = 0.00001f;
 
     void Start()
     {
@@ -51,6 +52,11 @@ public class PlayerController : MonoBehaviour
             transform.position.y,
             transform.position.z
         );
+
+        if(transform.position.z < -behindDistance + 12f)
+        {
+            gameManager.GameOver();
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -62,7 +68,7 @@ public class PlayerController : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Enemy"))
         {
-        FindObjectOfType<GameManager>().GameOver();
+        gameManager.GameOver();
         }
     }
 
@@ -82,7 +88,12 @@ public class PlayerController : MonoBehaviour
         {
             pm.pointCount++;
             Destroy(other.gameObject);
-            
         }
+    }
+    public void StopAnimation()
+    {
+        animator.enabled = false;
+        playerRb.linearVelocity = Vector3.zero;
+        enabled = false;
     }
 }

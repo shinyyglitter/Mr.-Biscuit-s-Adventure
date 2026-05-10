@@ -291,6 +291,8 @@ MonoBehaviour:
   startButton: {fileID: 670051219}
   pointManager: {fileID: 408130377}
   rowSpawnManager: {fileID: 578665938}
+  animator: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1 &434793471
 GameObject:
   m_ObjectHideFlags: 0
