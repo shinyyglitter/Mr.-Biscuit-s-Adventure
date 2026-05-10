@@ -145,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6369562289028115377, guid: 60ae384312e6ec1409ed98ce1abe10be, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.52
+      value: 5.786
       objectReference: {fileID: 0}
     - target: {fileID: 6369562289028115377, guid: 60ae384312e6ec1409ed98ce1abe10be, type: 3}
       propertyPath: m_LocalRotation.w
@@ -396,10 +396,10 @@ MonoBehaviour:
   - {fileID: 8562876701265270791, guid: ff31b12e4acc82c429353303ccb8f0de, type: 3}
   - {fileID: 5659149572987290622, guid: 87ab84c8f6ec1ee40a1d07f0f964b388, type: 3}
   - {fileID: 4102020346154799465, guid: 9b0231208146d7846bd3b02123265794, type: 3}
+  startPrefab: {fileID: 2743333885762260211, guid: db750a513b0d56447b33e0a0f0372279, type: 3}
   lastRow: {fileID: 0}
   startRows: 20
   rowSpacing: 2
-  gameManager: {fileID: 408130379}
 --- !u!4 &578665939
 Transform:
   m_ObjectHideFlags: 0

@@ -12,35 +12,40 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private Rigidbody playerRb;
     public PointManager pm;
+    public GameManager gameManager;
 
     void Start()
     {
        animator = GetComponent<Animator>();
        playerRb = GetComponent<Rigidbody>();
+       gameManager = FindAnyObjectByType<GameManager>();
        pm.pointCount = 0;
        
     }
 
     // Update is called once per frame
    void Update()
-{
-    horizontalInput = Input.GetAxis("Horizontal");
-    verticalInput = Input.GetAxis("Vertical");
-
-    transform.Rotate(Vector3.up, horizontalInput * turnSpeed * Time.deltaTime);
-
-   
-    if (Input.GetKeyDown(KeyCode.Space)&& isGrounded)
     {
-        playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        isGrounded = false;
+        if (!gameManager.isGameActive) return;
+        
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
+
+        transform.Rotate(Vector3.up, horizontalInput * turnSpeed * Time.deltaTime);
+
+    
+        if (Input.GetKeyDown(KeyCode.Space)&& isGrounded)
+        {
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
+        }
+
+        bool isWalking = horizontalInput != 0 || verticalInput != 0;
+        animator.SetBool("Walking", isWalking);
+        animator.SetBool("Idle", !isWalking);
     }
 
-    bool isWalking = horizontalInput != 0 || verticalInput != 0;
-    animator.SetBool("Walking", isWalking);
-    animator.SetBool("Idle", !isWalking);
-}
-private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
@@ -49,8 +54,10 @@ private void OnCollisionEnter(Collision collision)
     }
     void FixedUpdate()
     {
-    Vector3 move = transform.forward * verticalInput * speed;
-    playerRb.linearVelocity = new Vector3(move.x, playerRb.linearVelocity.y, move.z);
+        if (!gameManager.isGameActive) return;
+        
+        Vector3 move = transform.forward * verticalInput * speed;
+        playerRb.linearVelocity = new Vector3(move.x, playerRb.linearVelocity.y, move.z);
     }
 
     private void OnTriggerEnter(Collider other)
