@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private float speed = 5.0f;
-    private float turnSpeed = 80.0f;
+    private float turnSpeed = 100.0f;
     //Endre denne for hopphøyden
     private float jumpForce = 80.0f;
     private bool isGrounded;
@@ -52,6 +52,11 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+        }
+        
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+        FindObjectOfType<GameManager>().GameOver();
         }
     }
 
