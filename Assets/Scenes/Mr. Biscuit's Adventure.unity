@@ -209,7 +209,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7518957636276847359, guid: 60ae384312e6ec1409ed98ce1abe10be, type: 3}
       propertyPath: m_Mass
-      value: 10
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518957636276847359, guid: 60ae384312e6ec1409ed98ce1abe10be, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518957636276847359, guid: 60ae384312e6ec1409ed98ce1abe10be, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7041269531816775315, guid: 60ae384312e6ec1409ed98ce1abe10be, type: 3}
