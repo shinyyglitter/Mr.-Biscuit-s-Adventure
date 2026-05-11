@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         pointText.gameObject.SetActive(true);
         startButton.gameObject.SetActive(false);
         logoImage.gameObject.SetActive(false);
-        
+        RowController.speed = 2f;
         
         RowController.move = true;
         rowSpawnManager.StartSpawning();
