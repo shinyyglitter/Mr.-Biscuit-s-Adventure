@@ -4,22 +4,19 @@ public class CarSpawnManager : MonoBehaviour
 {
     public GameObject[] carPrefabs; 
     
-    private float minInterval = 2f;
-    private float maxInterval = 5f;
+    private float minInterval = 1f;
+    private float maxInterval = 3f;
     public Transform carSpawnPoint;
     public GameManager gameManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     { 
-        SpawnRandomCar();
+        gameManager = FindAnyObjectByType<GameManager>(); 
+
+        float randomStartDelay = Random.Range(minInterval, maxInterval);
+        Invoke(nameof(SpawnRandomCar), randomStartDelay);
     } 
-
-    public void StartSpawning()
-
-    {
-        SpawnRandomCar();
-    }
 
     // Update is called once per frame
     void Update() 
@@ -31,8 +28,6 @@ public class CarSpawnManager : MonoBehaviour
     {
         int randomIndex = Random.Range(0, carPrefabs.Length);
         Instantiate(carPrefabs[randomIndex],carSpawnPoint.position,carSpawnPoint.rotation,transform);
-
-        gameManager = FindAnyObjectByType<GameManager>();
         
         if (gameManager.isGameActive){
         float nextInterval = Random.Range(minInterval, maxInterval);
