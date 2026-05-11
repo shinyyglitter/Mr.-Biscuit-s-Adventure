@@ -3,7 +3,7 @@ using UnityEngine;
 public class RowController : MonoBehaviour
 {
 
-    private float speed = 2f;
+    public static float speed = 2f;
     public static bool move = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
