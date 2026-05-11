@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 6188466515440532334}
   - component: {fileID: 8839931333343773964}
   - component: {fileID: 7582908514566476124}
-  - component: {fileID: 2362772444146947444}
+  - component: {fileID: 6576451674535345115}
   m_Layer: 0
   m_Name: BigTree(2) (1)
   m_TagString: Obstacle
@@ -227,8 +227,8 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2362772444146947444
-BoxCollider:
+--- !u!136 &6576451674535345115
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -245,9 +245,11 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.7539874, y: 3.5664198, z: 2.0253313}
-  m_Center: {x: 0, y: 1.7832099, z: 0}
+  serializedVersion: 2
+  m_Radius: 0.14747465
+  m_Height: 3.5664198
+  m_Direction: 1
+  m_Center: {x: -0.004238248, y: 1.7832099, z: 0}
 --- !u!1 &1839481943041076763
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,8 +261,7 @@ GameObject:
   - component: {fileID: 5986655216947876511}
   - component: {fileID: 6806599098671734194}
   - component: {fileID: 5317115485544545744}
-  - component: {fileID: 1168217221980317670}
-  - component: {fileID: 2337905310016037725}
+  - component: {fileID: 7548646413464574470}
   m_Layer: 0
   m_Name: Rock1 (3)
   m_TagString: Obstacle
@@ -340,8 +341,8 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1168217221980317670
-BoxCollider:
+--- !u!136 &7548646413464574470
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -358,30 +359,11 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.8639474, y: 0.38752747, z: 0.7188444}
-  m_Center: {x: 0.051072344, y: 0.16851658, z: 0.029650211}
---- !u!65 &2337905310016037725
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839481943041076763}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.8639474, y: 0.38752747, z: 0.7188444}
-  m_Center: {x: 0.051072344, y: 0.16851658, z: 0.029650211}
+  serializedVersion: 2
+  m_Radius: 0.43040985
+  m_Height: 0.8608197
+  m_Direction: 1
+  m_Center: {x: 0.041689575, y: -0.02226764, z: 0.037469327}
 --- !u!1 &2743333885762260211
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,8 +434,7 @@ GameObject:
   - component: {fileID: 6867425448555492751}
   - component: {fileID: 5977702729640323598}
   - component: {fileID: 3250784355089043396}
-  - component: {fileID: 4391578487394537623}
-  - component: {fileID: 2731428285085058074}
+  - component: {fileID: 6985120934158144067}
   m_Layer: 0
   m_Name: Rock1 (2)
   m_TagString: Obstacle
@@ -533,8 +514,8 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4391578487394537623
-BoxCollider:
+--- !u!136 &6985120934158144067
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -551,30 +532,11 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.8639474, y: 0.38752747, z: 0.7188444}
-  m_Center: {x: 0.051072344, y: 0.16851658, z: 0.029650211}
---- !u!65 &2731428285085058074
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2982123392094908980}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.8639474, y: 0.38752747, z: 0.7188444}
-  m_Center: {x: 0.051072344, y: 0.16851658, z: 0.029650211}
+  serializedVersion: 2
+  m_Radius: 0.43040985
+  m_Height: 0.8608197
+  m_Direction: 1
+  m_Center: {x: 0.041689575, y: -0.02226764, z: 0.037469327}
 --- !u!1 &3761937897825130601
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +710,7 @@ GameObject:
   - component: {fileID: 2440951038659440436}
   - component: {fileID: 4544509074521149457}
   - component: {fileID: 5232872137398542419}
-  - component: {fileID: 6718928214337679858}
+  - component: {fileID: 7874911752567025268}
   m_Layer: 0
   m_Name: SmallTree(1)
   m_TagString: Obstacle
@@ -829,8 +791,8 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6718928214337679858
-BoxCollider:
+--- !u!136 &7874911752567025268
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -847,9 +809,11 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.0461633, y: 1.7652619, z: 1.0633011}
-  m_Center: {x: 0.00044620037, y: 0.88263845, z: 0.00024604797}
+  serializedVersion: 2
+  m_Radius: 0.0856364
+  m_Height: 1.7111058
+  m_Direction: 1
+  m_Center: {x: 0.0015588626, y: 0.8555529, z: 0}
 --- !u!1 &8176531871347255662
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,7 +825,7 @@ GameObject:
   - component: {fileID: 6353726630670397347}
   - component: {fileID: 3693414420340138119}
   - component: {fileID: 8897778020554397772}
-  - component: {fileID: 2537013529500134756}
+  - component: {fileID: 5188428568191022186}
   m_Layer: 0
   m_Name: SmallTree(1) (1)
   m_TagString: Obstacle
@@ -942,8 +906,8 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2537013529500134756
-BoxCollider:
+--- !u!136 &5188428568191022186
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -960,6 +924,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.0461633, y: 1.7652619, z: 1.0633011}
-  m_Center: {x: 0.00044620037, y: 0.88263845, z: 0.00024604797}
+  serializedVersion: 2
+  m_Radius: 0.0856364
+  m_Height: 1.7111058
+  m_Direction: 1
+  m_Center: {x: 0.0015588626, y: 0.8555529, z: 0}
