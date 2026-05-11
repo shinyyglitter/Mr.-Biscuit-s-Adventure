@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 7.0f;
+    private float speed = 6.0f;
     private float turnSpeed = 120.0f;
     //Endre denne for hopphøyden
     private float jumpForce = 100.0f;
