@@ -3,9 +3,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private float speed = 7.0f;
-    private float turnSpeed = 100.0f;
+    private float turnSpeed = 120.0f;
     //Endre denne for hopphøyden
-    private float jumpForce = 80.0f;
+    private float jumpForce = 100.0f;
     private bool isGrounded;
     private float horizontalInput;
     private float verticalInput;
