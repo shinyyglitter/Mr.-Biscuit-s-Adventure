@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI pointText;
     public TextMeshProUGUI finalScoreText;
+    public Image controller;
     public Image logoImage;
     public Button restartButton;
     public Button startButton;
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
         pointText.gameObject.SetActive(true);
         startButton.gameObject.SetActive(false);
         logoImage.gameObject.SetActive(false);
+        controller.gameObject.SetActive(false);
         RowController.speed = 2f;
         
         RowController.move = true;
