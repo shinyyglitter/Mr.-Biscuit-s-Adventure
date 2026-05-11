@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
             transform.position.z
         );
 
-        if(transform.position.z < -behindDistance + 12f)
+        if(transform.position.z < -behindDistance)
         {
             gameManager.GameOver();
         }
