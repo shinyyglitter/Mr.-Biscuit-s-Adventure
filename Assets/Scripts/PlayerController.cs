@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public PointManager pm;
     public GameManager gameManager;
     public  float behindDistance = 0.00001f;
+    public ParticleSystem particlesmoke;
 
     void Start()
     {
@@ -65,8 +66,9 @@ public class PlayerController : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Enemy"))
         {
-        gameManager.GameOver();
-        animator.SetBool("Death", true);
+            gameManager.GameOver();
+            animator.SetBool("Death", true);
+            particlesmoke.Play();
         }
         if(collision.gameObject.CompareTag("Backwall"))
         {
