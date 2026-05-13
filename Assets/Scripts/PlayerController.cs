@@ -53,10 +53,7 @@ public class PlayerController : MonoBehaviour
             transform.position.z
         );
 
-        if(transform.position.z < -behindDistance)
-        {
-            gameManager.GameOver();
-        }
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -70,6 +67,10 @@ public class PlayerController : MonoBehaviour
         {
         gameManager.GameOver();
         }
+        if(collision.gameObject.CompareTag("Backwall"))
+        {
+            gameManager.GameOver();
+        }
     }
 
     void FixedUpdate()
@@ -81,7 +82,7 @@ public class PlayerController : MonoBehaviour
     
         playerRb.linearVelocity = new Vector3(targetVelocity.x + playerRb.linearVelocity.x * 0f, playerRb.linearVelocity.y, targetVelocity.z + playerRb.linearVelocity.z * 0f);
     }
-
+//Poeng
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Point"))
