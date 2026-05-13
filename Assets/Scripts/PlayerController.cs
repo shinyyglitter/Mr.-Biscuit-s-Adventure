@@ -4,41 +4,38 @@ public class PlayerController : MonoBehaviour
 {
     private float speed = 6.0f;
     private float turnSpeed = 120.0f;
-    //Endre denne for hopphøyden
     private float jumpForce = 100.0f;
     private bool isGrounded;
     private float horizontalInput;
     private float verticalInput;
+
     public Animator animator;
     private Rigidbody playerRb;
     public PointManager pm;
     public GameManager gameManager;
-    public  float behindDistance = 0.00001f;
+    public float VerticalInput => verticalInput;
     public ParticleSystem particlesmoke;
 
     void Start()
     {
-       animator = GetComponent<Animator>();
-       playerRb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
+        playerRb = GetComponent<Rigidbody>();
 
-       playerRb.freezeRotation = true;
-       gameManager = FindAnyObjectByType<GameManager>();
-       pm.pointCount = 0;
-       
+        playerRb.freezeRotation = true;
+        gameManager = FindAnyObjectByType<GameManager>();
+        pm.pointCount = 0;
     }
 
-    // Update is called once per frame
-   void Update()
+    void Update()
     {
         if (!gameManager.isGameActive) return;
-        
+
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
         transform.Rotate(Vector3.up, horizontalInput * turnSpeed * Time.deltaTime);
 
-    
-        if (Input.GetKeyDown(KeyCode.Space)&& isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
@@ -47,14 +44,6 @@ public class PlayerController : MonoBehaviour
         bool isWalking = horizontalInput != 0 || verticalInput != 0;
         animator.SetBool("Walking", isWalking);
         animator.SetBool("Idle", !isWalking);
-
-        transform.position = new Vector3(
-            Mathf.Clamp(transform.position.x, -7f, 7f),
-            transform.position.y,
-            transform.position.z
-        );
-
-        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -63,14 +52,8 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
-        
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            gameManager.GameOver();
-            animator.SetBool("Death", true);
-            particlesmoke.Play();
-        }
-        if(collision.gameObject.CompareTag("Backwall"))
+
+        if (collision.gameObject.CompareTag("Backwall"))
         {
             gameManager.GameOver();
         }
@@ -80,12 +63,14 @@ public class PlayerController : MonoBehaviour
     {
         if (!gameManager.isGameActive) return;
 
-        Vector3 move = transform.forward * verticalInput * speed;
-        Vector3 targetVelocity = transform.forward * verticalInput * speed;
-    
-        playerRb.linearVelocity = new Vector3(targetVelocity.x + playerRb.linearVelocity.x * 0f, playerRb.linearVelocity.y, targetVelocity.z + playerRb.linearVelocity.z * 0f);
+        Vector3 moveVelocity = transform.forward * verticalInput * speed;
+
+        Vector3 velocity = playerRb.linearVelocity;
+        velocity.x = moveVelocity.x;
+        velocity.z = moveVelocity.z;
+        playerRb.linearVelocity = velocity;
     }
-//Poeng
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Point"))
@@ -93,14 +78,20 @@ public class PlayerController : MonoBehaviour
             pm.pointCount++;
             Destroy(other.gameObject);
         }
-
         if (other.gameObject.CompareTag("FishPoint"))
         {
             pm.pointCount++;
             Destroy(other.gameObject);
         }
 
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            gameManager.GameOver();
+            animator.SetBool("Death", true);
+            particlesmoke.Play();
+        }
     }
+
     public void StopAnimation()
     {
         animator.enabled = false;

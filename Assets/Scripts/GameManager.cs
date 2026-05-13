@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
         bgOverlayII.gameObject.SetActive(false);
         scoreBox.gameObject.SetActive(false);
         playerController = FindAnyObjectByType<PlayerController>();
+        RowController.speed = 0f;
     }
     public void StartGame()
     {

@@ -2,25 +2,21 @@ using UnityEngine;
 
 public class RowController : MonoBehaviour
 {
-
     public static float speed = 2f;
     public static bool move = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
 
+    private Rigidbody rb;
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
-    /*void Update()
-    {
-        if (!move) return;
-        transform.Translate(Vector3.back * Time.deltaTime * speed);
-    }*/
 
     void FixedUpdate()
     {
         if (!move) return;
-        transform.Translate(Vector3.back * speed * Time.fixedDeltaTime);
+
+        Vector3 movement = Vector3.back * speed * Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + movement);
     }
 }

@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 1572204009987944986}
   - component: {fileID: 5795192807756316511}
   - component: {fileID: 2181968323522973457}
+  - component: {fileID: 1212129752802525711}
   m_Layer: 0
   m_Name: Road(3)
   m_TagString: Ground
@@ -126,6 +127,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f8a8d9a07bad54e8fa5a86588f37a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyOutOfBounds
+--- !u!54 &1212129752802525711
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3259651678458519924}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6092461705502558313
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +489,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2898823839317483214}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 695851572946252326}
   m_SourcePrefab: {fileID: 100100000, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}
 --- !u!1 &8534551918431625458 stripped
 GameObject:
@@ -474,7 +505,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8534551918431625458}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3f7e663a2fc1ad0408140d8c20720878, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -500,6 +531,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08453ef46a269fe47bc2c3f8fa5042be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParentPlayer
+--- !u!54 &695851572946252326
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8534551918431625458}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &9023807845720570440 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 658f4a20abc561247ba5e8e466ff929e, type: 3}

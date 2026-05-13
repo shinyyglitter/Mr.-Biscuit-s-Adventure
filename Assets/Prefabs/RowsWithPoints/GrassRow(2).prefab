@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3271913308867645104}
   - component: {fileID: 6738698099743919820}
   - component: {fileID: 1348069990377942907}
+  - component: {fileID: 2174193524813856857}
   m_Layer: 0
   m_Name: Grass
   m_TagString: Ground
@@ -99,7 +100,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460169998215014556}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3f7e663a2fc1ad0408140d8c20720878, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -125,6 +126,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08453ef46a269fe47bc2c3f8fa5042be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParentPlayer
+--- !u!54 &2174193524813856857
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460169998215014556}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1576545581795235503
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,6 +164,7 @@ GameObject:
   - component: {fileID: 2359923197578162246}
   - component: {fileID: 989558630719326690}
   - component: {fileID: 5592996573074723509}
+  - component: {fileID: 2250687269471879952}
   m_Layer: 0
   m_Name: GrassRow(2)
   m_TagString: Ground
@@ -184,6 +213,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f8a8d9a07bad54e8fa5a86588f37a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyOutOfBounds
+--- !u!54 &2250687269471879952
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576545581795235503}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2108919243665864288
 GameObject:
   m_ObjectHideFlags: 0

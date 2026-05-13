@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class ParentPlayer : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-  private Vector3 lastPosition;
+    private Vector3 lastPosition;
+    private Vector3 platformDelta;
 
-    void Start()
+    void Awake()
     {
         lastPosition = transform.position;
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
+        platformDelta = transform.position - lastPosition;
         lastPosition = transform.position;
     }
 
@@ -21,9 +22,10 @@ public class ParentPlayer : MonoBehaviour
         {
             Rigidbody playerRb = collision.gameObject.GetComponent<Rigidbody>();
 
-            Vector3 platformDelta = transform.position - lastPosition;
-
-            playerRb.MovePosition(playerRb.position + platformDelta);
+            if (playerRb != null && platformDelta != Vector3.zero)
+            {
+                playerRb.MovePosition(playerRb.position + platformDelta);
+            }
         }
     }
 }
