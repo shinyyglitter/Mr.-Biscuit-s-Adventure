@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         isGameActive = true;
-        pointManager.pointCount = 000;
+        pointManager.pointCount = 0;
         scoreBox.gameObject.SetActive(true);
         pointText.gameObject.SetActive(true);
         startButton.gameObject.SetActive(false);
