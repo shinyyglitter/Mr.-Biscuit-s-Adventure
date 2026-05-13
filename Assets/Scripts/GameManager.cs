@@ -7,13 +7,17 @@ public class GameManager : MonoBehaviour
 {
     public bool isGameActive;
     
-    public TextMeshProUGUI gameOverText;
+    public Image gameOverText;
     public TextMeshProUGUI pointText;
     public TextMeshProUGUI finalScoreText;
-    public Image controller;
+    public Image controllerI;
+    public Image controllerII;
     public Image logoImage;
-    public Button restartButton;
-    public Button startButton;
+    public Image restartButton;
+    public Image startButton;
+    public Image bgOverlayI;
+    public Image bgOverlayII;
+    public Image scoreBox;
     public PointManager pointManager;
     public RowSpawnManager rowSpawnManager;
     public Animator animator;
@@ -25,16 +29,21 @@ public class GameManager : MonoBehaviour
         isGameActive = false;
         gameOverText.gameObject.SetActive(false);
         restartButton.gameObject.SetActive(false);
+        bgOverlayII.gameObject.SetActive(false);
+        scoreBox.gameObject.SetActive(false);
         playerController = FindAnyObjectByType<PlayerController>();
     }
     public void StartGame()
     {
         isGameActive = true;
-        pointManager.pointCount = 0;
+        pointManager.pointCount = 000;
+        scoreBox.gameObject.SetActive(true);
         pointText.gameObject.SetActive(true);
         startButton.gameObject.SetActive(false);
         logoImage.gameObject.SetActive(false);
-        controller.gameObject.SetActive(false);
+        controllerI.gameObject.SetActive(false);
+        controllerII.gameObject.SetActive(false);
+        bgOverlayI.gameObject.SetActive(false);
         RowController.speed = 2f;
         
         RowController.move = true;
@@ -49,7 +58,9 @@ public class GameManager : MonoBehaviour
         restartButton.gameObject.SetActive(true);
         pointText.gameObject.SetActive(false);
         finalScoreText.gameObject.SetActive(true);
-        finalScoreText.text = "Final Score: " + pointManager.pointCount;
+        finalScoreText.text = "SCORE: " + pointManager.pointCount;
+        bgOverlayII.gameObject.SetActive(true);
+        scoreBox.gameObject.SetActive(false);
         playerController.StopAnimation();
             
     }
