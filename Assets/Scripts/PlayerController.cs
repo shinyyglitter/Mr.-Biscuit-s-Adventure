@@ -93,6 +93,13 @@ public class PlayerController : MonoBehaviour
             pm.pointCount++;
             Destroy(other.gameObject);
         }
+
+        if (other.gameObject.CompareTag("FishPoint"))
+        {
+            pm.pointCount++;
+            Destroy(other.gameObject);
+        }
+
     }
     public void StopAnimation()
     {

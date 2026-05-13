@@ -7,12 +7,15 @@ public class RowSpawnManager : MonoBehaviour
     public GameObject startPrefab;
     public Transform lastRow;
     private GameObject lastSpawnedPrefab;
+    private GameManager gameManager;
     public int startRows = 20;
     public float rowSpacing = 2f; 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created 
     void Start() 
     { 
+        gameManager = FindAnyObjectByType<GameManager>();
+        
         for (int i = 0; i < startRows; i++)
         {
             if (i == 3)
@@ -40,7 +43,7 @@ public class RowSpawnManager : MonoBehaviour
 
     IEnumerator SpawnLoop()
     {
-        while (true)
+        while (gameManager.isGameActive)
         {
             NoRepeatingRows();
             yield return new WaitForSeconds(1f);

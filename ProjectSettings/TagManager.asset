@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Point
   - Backwall
+  - FishPoint
   layers:
   - Default
   - TransparentFX
