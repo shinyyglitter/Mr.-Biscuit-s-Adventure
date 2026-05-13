@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
         gameManager.GameOver();
+        animator.SetBool("Death", true);
         }
     }
 

@@ -61,7 +61,6 @@ public class GameManager : MonoBehaviour
         finalScoreText.text = "SCORE: " + pointManager.pointCount;
         bgOverlayII.gameObject.SetActive(true);
         scoreBox.gameObject.SetActive(false);
-        playerController.StopAnimation();
             
     }
     public void RestartGame()

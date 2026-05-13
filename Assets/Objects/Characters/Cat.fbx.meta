@@ -65,11 +65,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: AnimalArmature|AnimalArmature|AnimalArmature|Headbutt
-      takeName: AnimalArmature|AnimalArmature|AnimalArmature|Headbutt
+      name: AnimalArmature|AnimalArmature|AnimalArmature|Death
+      takeName: AnimalArmature|AnimalArmature|AnimalArmature|Death
       internalID: -4668714534972077938
       firstFrame: 0
-      lastFrame: 19
+      lastFrame: 27
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
