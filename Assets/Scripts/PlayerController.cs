@@ -10,16 +10,19 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
     public Animator animator;
+    public Animator dogAnimator;
     private Rigidbody playerRb;
     public PointManager pm;
     public GameManager gameManager;
     public  float behindDistance = 0.00001f;
-    public ParticleSystem particlesmoke;
+    public ParticleSystem particleSmoke;
+    public ParticleSystem particleFight;
 
     void Start()
     {
        animator = GetComponent<Animator>();
        playerRb = GetComponent<Rigidbody>();
+       dogAnimator = GetComponent<Animator>();
 
        playerRb.freezeRotation = true;
        gameManager = FindAnyObjectByType<GameManager>();
@@ -68,11 +71,22 @@ public class PlayerController : MonoBehaviour
         {
             gameManager.GameOver();
             animator.SetBool("Death", true);
-            particlesmoke.Play();
+            dogAnimator.SetBool("Idle", true);
+            particleSmoke.Play();
         }
+
+        if (collision.gameObject.CompareTag("Dog"))
+        {
+            gameManager.GameOver();
+            animator.SetBool("Death", true);
+            dogAnimator.SetBool("Idle", true);
+            particleFight.Play();
+        }
+
         if(collision.gameObject.CompareTag("Backwall"))
         {
             gameManager.GameOver();
+            dogAnimator.SetBool("Idle", true);
         }
     }
 

@@ -59,6 +59,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f8a8d9a07bad54e8fa5a86588f37a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyOutOfBounds
+--- !u!1 &4748528432747221729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8803832806710549786}
+  m_Layer: 0
+  m_Name: DogSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8803832806710549786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4748528432747221729}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 17.5, y: 0, z: -0.21000004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7298321537465653118}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &5874244256101420337
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,6 +127,8 @@ Transform:
   - {fileID: 2577200571907855841}
   - {fileID: 8320069595509302508}
   - {fileID: 1966444806275261303}
+  - {fileID: 8803832806710549786}
+  - {fileID: 7733754261856551355}
   m_Father: {fileID: 5136895028888353120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6778921408677008989
@@ -233,6 +266,54 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.000001, y: 2.2204466e-16, z: 10.000002}
   m_Center: {x: 0, y: -0.000000029802322, z: -0.000000029802322}
+--- !u!1 &8193316444689477544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7733754261856551355}
+  - component: {fileID: 8354607441698791053}
+  m_Layer: 0
+  m_Name: DogSpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7733754261856551355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8193316444689477544}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.75, y: 0, z: -0.21000004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7298321537465653118}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8354607441698791053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8193316444689477544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230acd8cce6e9ea41b8444ac3a7070c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DogSpawnManager
+  dogPrefab:
+  - {fileID: 585127051442828840, guid: e983fc539dfc63e4faef652995cf2113, type: 3}
+  dogSpawnPoint: {fileID: 8803832806710549786}
+  gameManager: {fileID: 0}
 --- !u!1001 &1570515231458194947
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ TagManager:
   - Point
   - Backwall
   - FishPoint
+  - Dog
   layers:
   - Default
   - TransparentFX
