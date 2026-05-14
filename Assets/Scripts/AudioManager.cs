@@ -2,8 +2,12 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    [Header("Audio Sources")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource sfxSource;
+    [SerializeField] AudioSource AmbientSource;
+
+    [Header("Audio Clips")]
         public AudioClip background;
         public AudioClip jump;
         public AudioClip point;
@@ -21,6 +25,11 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
+    }
+
+    public void PlayAmbient(AudioClip clip)
+    {
+        AmbientSource.PlayOneShot(clip);
     }
 
     // Update is called once per frame

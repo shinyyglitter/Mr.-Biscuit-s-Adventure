@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public RowSpawnManager rowSpawnManager;
     public Animator animator;
     public PlayerController playerController;
+    public AudioManager audioManager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
         scoreBox.gameObject.SetActive(false);
         playerController = FindAnyObjectByType<PlayerController>();
         RowController.speed = 0f;
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
     public void StartGame()
     {
@@ -46,7 +48,7 @@ public class GameManager : MonoBehaviour
         controllerII.gameObject.SetActive(false);
         bgOverlayI.gameObject.SetActive(false);
         RowController.speed = 1.5f;
-        
+        audioManager.PlaySFX(audioManager.buttonClick);
         RowController.move = true;
         rowSpawnManager.StartSpawning();
     }
@@ -65,6 +67,7 @@ public class GameManager : MonoBehaviour
     }
     public void RestartGame()
         {
+            audioManager.PlaySFX(audioManager.buttonClick);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     // Update is called once per frame
