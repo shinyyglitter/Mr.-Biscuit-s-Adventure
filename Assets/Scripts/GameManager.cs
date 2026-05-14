@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         controllerI.gameObject.SetActive(false);
         controllerII.gameObject.SetActive(false);
         bgOverlayI.gameObject.SetActive(false);
-        RowController.speed = 2f;
+        RowController.speed = 1.5f;
         
         RowController.move = true;
         rowSpawnManager.StartSpawning();
