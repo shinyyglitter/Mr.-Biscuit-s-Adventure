@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     private float verticalInput;
 
     public Animator animator;
-    public Animator dogAnimator;
     private Rigidbody playerRb;
     public PointManager pm;
     public GameManager gameManager;
@@ -21,7 +20,6 @@ public class PlayerController : MonoBehaviour
     {
        animator = GetComponent<Animator>();
        playerRb = GetComponent<Rigidbody>();
-       dogAnimator = GetComponent<Animator>();
 
         playerRb.freezeRotation = true;
         gameManager = FindAnyObjectByType<GameManager>();
@@ -50,10 +48,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+       
         if(collision.gameObject.CompareTag("Backwall"))
         {
             gameManager.GameOver();
-            dogAnimator.SetBool("Idle", true);
         }
     }
     private void OnCollisionStay(Collision collision)
@@ -98,15 +96,14 @@ public class PlayerController : MonoBehaviour
         {
             gameManager.GameOver();
             animator.SetBool("Death", true);
-            dogAnimator.SetBool("Idle", true);
             particlesmoke.Play();
         }
         if (other.gameObject.CompareTag("Dog"))
         {
             gameManager.GameOver();
             animator.SetBool("Death", true);
-            dogAnimator.SetBool("Idle", true);
             particleFight.Play();
+            gameManager.GameOver();
         }
     }
 
