@@ -6,7 +6,7 @@ public class DogBarkTrigger : MonoBehaviour
     public float triggerDistance = 100f;
     public float barkCooldown = 1.5f;
 
-    private AudioSource dogAudio;
+    public AudioSource dogAudio;
     private GameManager gameManager;
     private float nextBarkTime = 0f;
 
@@ -15,6 +15,7 @@ public class DogBarkTrigger : MonoBehaviour
         gameManager = FindAnyObjectByType<GameManager>();
         player = FindAnyObjectByType<PlayerController>().transform;
         dogAudio = GetComponent<AudioSource>();
+        dogAudio.volume = PlayerPrefs.GetFloat("sfxVolume", 1);
     }
 
     void Update()
