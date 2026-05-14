@@ -82,18 +82,30 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b55157c1800d8a54f82c075a1623d9f4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 362824643226000484}
+      addedObject: {fileID: 3128402572768941623}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b55157c1800d8a54f82c075a1623d9f4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3128402572768941623}
+      addedObject: {fileID: 1476061571904528217}
   m_SourcePrefab: {fileID: 100100000, guid: b55157c1800d8a54f82c075a1623d9f4, type: 3}
 --- !u!1 &6996033192212406403 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b55157c1800d8a54f82c075a1623d9f4, type: 3}
   m_PrefabInstance: {fileID: 7914951889008238034}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &362824643226000484
-BoxCollider:
+--- !u!114 &3128402572768941623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6996033192212406403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e82e549c3c763d4d870d891d426f515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishRotation
+--- !u!136 &1476061571904528217
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -110,18 +122,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.009219388, y: 0.003912587, z: 0.0015677849}
-  m_Center: {x: -0.00024826755, y: 0.000089037465, z: 0.0006414446}
---- !u!114 &3128402572768941623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6996033192212406403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e82e549c3c763d4d870d891d426f515, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FishRotation
+  serializedVersion: 2
+  m_Radius: 0.0051833848
+  m_Height: 0.0103667695
+  m_Direction: 1
+  m_Center: {x: -0.00039211364, y: -0.00041813852, z: 0.0004573822}
