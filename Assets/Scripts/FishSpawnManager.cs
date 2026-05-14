@@ -8,7 +8,7 @@ public class FishSpawnManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (Random.value < 0.7f)
+        if (Random.value < 0.4f)
         {
             Instantiate(fishPrefab[0], fishSpawnPoint.position, fishSpawnPoint.rotation, transform);
         }
