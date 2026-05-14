@@ -81,6 +81,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void QuitGame()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            audioManager.PlaySFX(audioManager.buttonClick);
+            Application.Quit();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
