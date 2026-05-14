@@ -70,7 +70,6 @@ public class GameManager : MonoBehaviour
         finalScoreText.text = "SCORE: " + pointManager.pointCount;
         bgOverlayII.gameObject.SetActive(true);
         scoreBox.gameObject.SetActive(false);
-        
         audioManager.ShowSliders();
         musicIcon.gameObject.SetActive(true);
         soundIcon.gameObject.SetActive(true);
