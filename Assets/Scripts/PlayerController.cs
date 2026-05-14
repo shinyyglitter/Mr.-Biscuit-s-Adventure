@@ -15,11 +15,13 @@ public class PlayerController : MonoBehaviour
     public GameManager gameManager;
     public ParticleSystem particlesmoke;
     public ParticleSystem particleFight;
+    public AudioManager audioManager;
 
     void Start()
     {
        animator = GetComponent<Animator>();
        playerRb = GetComponent<Rigidbody>();
+       audioManager = FindAnyObjectByType<AudioManager>();
 
         playerRb.freezeRotation = true;
         gameManager = FindAnyObjectByType<GameManager>();
@@ -39,6 +41,7 @@ public class PlayerController : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
+            audioManager.PlaySFX(audioManager.jump);
         }
 
         bool isWalking = horizontalInput != 0 || verticalInput != 0;
@@ -85,11 +88,13 @@ public class PlayerController : MonoBehaviour
         {
             pm.pointCount++;
             Destroy(other.gameObject);
+            
         }
-        if (other.gameObject.CompareTag("FishPoint"))
+        if( other.gameObject.CompareTag("FishPoint"))
         {
-            pm.pointCount++;
+            pm.pointCount ++;
             Destroy(other.gameObject);
+            audioManager.PlaySFX(audioManager.point);
         }
 
         if (other.gameObject.CompareTag("Enemy"))
@@ -97,6 +102,7 @@ public class PlayerController : MonoBehaviour
             gameManager.GameOver();
             animator.SetBool("Death", true);
             particlesmoke.Play();
+            audioManager.PlaySFX(audioManager.carCrash);
         }
         if (other.gameObject.CompareTag("Dog"))
         {
