@@ -10023,9 +10023,7 @@ MonoBehaviour:
   pointManager: {fileID: 408130377}
   rowSpawnManager: {fileID: 578665938}
   animator: {fileID: 1396449808}
-  dogAnimator: {fileID: 1342602708850179430, guid: e983fc539dfc63e4faef652995cf2113, type: 3}
   playerController: {fileID: 1396449809}
-  dogObject: {fileID: 585127051442828840, guid: e983fc539dfc63e4faef652995cf2113, type: 3}
 --- !u!114 &408130380
 MonoBehaviour:
   m_ObjectHideFlags: 0
