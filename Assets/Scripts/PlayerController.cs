@@ -4,7 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     private float speed = 6.0f;
     private float turnSpeed = 120.0f;
-    private float jumpForce = 100.0f;
+    private float jumpForce = 80.0f;
     private bool isGrounded;
     private float horizontalInput;
     private float verticalInput;
@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
     public PointManager pm;
     public GameManager gameManager;
-    public  float behindDistance = 0.00001f;
     public ParticleSystem particlesmoke;
     public ParticleSystem particleFight;
 
@@ -51,20 +50,26 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
-        
-       
-        
         if(collision.gameObject.CompareTag("Backwall"))
         {
             gameManager.GameOver();
             dogAnimator.SetBool("Idle", true);
         }
     }
-
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
+        }
+    }
     void FixedUpdate()
     {
         if (!gameManager.isGameActive) return;
@@ -76,7 +81,6 @@ public class PlayerController : MonoBehaviour
         velocity.z = moveVelocity.z;
         playerRb.linearVelocity = velocity;
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Point"))
