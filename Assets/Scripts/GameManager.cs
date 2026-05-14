@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
     {
         isGameActive = false;
         RowController.move = false;
+        audioManager.StopAmbient();
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
         pointText.gameObject.SetActive(false);
@@ -64,6 +65,7 @@ public class GameManager : MonoBehaviour
         finalScoreText.text = "SCORE: " + pointManager.pointCount;
         bgOverlayII.gameObject.SetActive(true);
         scoreBox.gameObject.SetActive(false);
+        
     }
     public void RestartGame()
         {
