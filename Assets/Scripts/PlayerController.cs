@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
     private float speed = 6.0f;
     private float turnSpeed = 120.0f;
     private float jumpForce = 80.0f;
+    private float nextMeowTime = 0f;
+    public float meowInterval = 10f;
     private bool isGrounded;
     private float horizontalInput;
     private float verticalInput;
@@ -54,6 +56,12 @@ public class PlayerController : MonoBehaviour
         transform.position.y,
         transform.position.z
         );
+
+        if(Time.time >= nextMeowTime)
+        {
+            audioManager.PlaySFX(audioManager.cat);
+            nextMeowTime = Time.time + meowInterval;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -117,6 +125,8 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Death", true);
             particleFight.Play();
             gameManager.GameOver();
+            audioManager.PlaySFX(audioManager.dog);
+            audioManager.PlaySFX(audioManager.cat);
         }
     }
 
