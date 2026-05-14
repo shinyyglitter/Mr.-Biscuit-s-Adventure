@@ -5021,7 +5021,6 @@ RectTransform:
   m_Children:
   - {fileID: 280267302}
   - {fileID: 1427023659}
-  - {fileID: 719427577}
   - {fileID: 2136333767}
   m_Father: {fileID: 1618806071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10246,13 +10245,12 @@ MonoBehaviour:
   bgOverlayII: {fileID: 893451468}
   scoreBox: {fileID: 998554686}
   musicIcon: {fileID: 280267303}
-  soundIcon: {fileID: 719427578}
+  soundIcon: {fileID: 0}
   pointManager: {fileID: 408130377}
   rowSpawnManager: {fileID: 578665938}
   animator: {fileID: 1396449808}
   playerController: {fileID: 1396449809}
-  audioManager: {fileID: 0}
-  audioManager: {fileID: 0}
+  audioManager: {fileID: 1057861301}
 --- !u!114 &408130380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11254,7 +11252,7 @@ MonoBehaviour:
   sfxSlider: {fileID: 2136333768}
   musicSource: {fileID: 1767483925}
   sfxSource: {fileID: 1334104491}
-  AmbientSource: {fileID: 878303280}
+  ambientSource: {fileID: 878303280}
   background: {fileID: 8300000, guid: 685a0098f3294b348a849b6486ad25c6, type: 3}
   jump: {fileID: 8300000, guid: e68b983b33083bd4296e2c0945230ead, type: 3}
   point: {fileID: 8300000, guid: 9beb3740282deb84d8021c6a7fd04f72, type: 3}
@@ -11850,135 +11848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3082814957c7f4589f8a0acdba7872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
---- !u!1 &1406562073
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1406562074}
-  - component: {fileID: 1406562075}
-  m_Layer: 0
-  m_Name: Ambient
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1406562074
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406562073}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1057861302}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1406562075
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406562073}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1427023658
 GameObject:
   m_ObjectHideFlags: 0
@@ -12098,7 +11967,7 @@ MonoBehaviour:
   sfxSlider: {fileID: 2136333768}
   musicSource: {fileID: 1767483925}
   sfxSource: {fileID: 1334104491}
-  ambientSource: {fileID: 1406562075}
+  ambientSource: {fileID: 878303280}
   background: {fileID: 8300000, guid: 685a0098f3294b348a849b6486ad25c6, type: 3}
   jump: {fileID: 8300000, guid: e68b983b33083bd4296e2c0945230ead, type: 3}
   point: {fileID: 8300000, guid: 9beb3740282deb84d8021c6a7fd04f72, type: 3}
@@ -12106,6 +11975,7 @@ MonoBehaviour:
   cat: {fileID: 8300000, guid: 4826099d50068aa40ade463f8c167e92, type: 3}
   carCrash: {fileID: 8300000, guid: e6b3e3dddd6ae7942bdc45632a6233e6, type: 3}
   buttonClick: {fileID: 8300000, guid: 55f9079720ddde5448bb0c46703a5b4c, type: 3}
+  gameManager: {fileID: 0}
 --- !u!1 &1437229483
 GameObject:
   m_ObjectHideFlags: 0
@@ -13502,7 +13372,7 @@ MonoBehaviour:
   sfxSlider: {fileID: 2136333768}
   musicSource: {fileID: 1767483925}
   sfxSource: {fileID: 1334104491}
-  ambientSource: {fileID: 1406562075}
+  ambientSource: {fileID: 878303280}
   background: {fileID: 8300000, guid: 685a0098f3294b348a849b6486ad25c6, type: 3}
   jump: {fileID: 8300000, guid: e68b983b33083bd4296e2c0945230ead, type: 3}
   point: {fileID: 8300000, guid: 9beb3740282deb84d8021c6a7fd04f72, type: 3}
@@ -13510,6 +13380,7 @@ MonoBehaviour:
   cat: {fileID: 8300000, guid: 4826099d50068aa40ade463f8c167e92, type: 3}
   carCrash: {fileID: 8300000, guid: e6b3e3dddd6ae7942bdc45632a6233e6, type: 3}
   buttonClick: {fileID: 8300000, guid: 55f9079720ddde5448bb0c46703a5b4c, type: 3}
+  gameManager: {fileID: 0}
 --- !u!1 &2136506803
 GameObject:
   m_ObjectHideFlags: 0

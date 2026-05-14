@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Sources")]
     public AudioSource musicSource;
     public AudioSource sfxSource;
-    public AudioSource AmbientSource;
+    public AudioSource ambientSource;
 
     [Header("Audio Clips")]
         public AudioClip background;
@@ -52,6 +52,10 @@ public class AudioManager : MonoBehaviour
     {
         if (!gameManager.isGameActive) return;
         ambientSource.PlayOneShot(clip);
+    }
+    public void StopAmbient()
+    {
+        ambientSource.Stop();
     }
 
     public void ChangeMusicVolume()
