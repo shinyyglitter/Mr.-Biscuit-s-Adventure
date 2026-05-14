@@ -47,6 +47,13 @@ public class PlayerController : MonoBehaviour
         bool isWalking = horizontalInput != 0 || verticalInput != 0;
         animator.SetBool("Walking", isWalking);
         animator.SetBool("Idle", !isWalking);
+
+        // character boundary-------------
+        transform.position = new Vector3(
+        Mathf.Clamp(transform.position.x, -9f, 9f),
+        transform.position.y,
+        transform.position.z
+        );
     }
 
     private void OnCollisionEnter(Collision collision)
