@@ -83,11 +83,9 @@ public class GameManager : MonoBehaviour
 
     public void QuitGame()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
             audioManager.PlaySFX(audioManager.buttonClick);
             Application.Quit();
-        }
+        
     }
 
     // Update is called once per frame
