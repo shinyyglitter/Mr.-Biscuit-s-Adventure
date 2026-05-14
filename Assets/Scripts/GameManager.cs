@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public Image bgOverlayI;
     public Image bgOverlayII;
     public Image scoreBox;
+    public Image musicIcon;
+    public Image soundIcon;
     public PointManager pointManager;
     public RowSpawnManager rowSpawnManager;
     public Animator animator;
@@ -51,6 +53,9 @@ public class GameManager : MonoBehaviour
         audioManager.PlaySFX(audioManager.buttonClick);
         RowController.move = true;
         rowSpawnManager.StartSpawning();
+        audioManager.HideSliders();
+        musicIcon.gameObject.SetActive(false);
+        soundIcon.gameObject.SetActive(false);
     }
 
     public void GameOver()
@@ -64,12 +69,17 @@ public class GameManager : MonoBehaviour
         finalScoreText.text = "SCORE: " + pointManager.pointCount;
         bgOverlayII.gameObject.SetActive(true);
         scoreBox.gameObject.SetActive(false);
+        audioManager.ShowSliders();
+        musicIcon.gameObject.SetActive(true);
+        soundIcon.gameObject.SetActive(true);
     }
+
     public void RestartGame()
-        {
-            audioManager.PlaySFX(audioManager.buttonClick);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+    {
+        audioManager.PlaySFX(audioManager.buttonClick);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     // Update is called once per frame
     void Update()
     {
